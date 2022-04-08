@@ -26,6 +26,7 @@ namespace SisAdministracionGimnasio.WebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +37,7 @@ namespace SisAdministracionGimnasio.WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+           
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -45,6 +47,7 @@ namespace SisAdministracionGimnasio.WebApi
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapRazorPages();
             });
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SisAdministracionGimnasio.WebApi.Filtros
 {
-    public class FilterAuthorize : IAuthorizationFilter
+    public class FilterAuthorize :ActionFilterAttribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {
